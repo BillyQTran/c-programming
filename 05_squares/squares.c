@@ -7,6 +7,11 @@
  * offset (INCLUSIVE) and offset + size (EXCLUSIVE)
  */
 int isInRange(int coord, int offset, int size) {
+
+  if(offset<=coord&&coord<offset+size)
+    {
+      return 1;
+    }
   // if coord is in range, return 1
   // else, return 0
   return 0;
@@ -18,6 +23,11 @@ int isInRange(int coord, int offset, int size) {
  */
 int isAtBorder(int coord, int offset, int size) {
   // if coord is equal to offest or offset + size
+  if(coord==offset||coord==offset + size)
+    {
+      return 1;
+	}
+  
   // return 1, else return 0
   return 0;
 }
@@ -25,8 +35,32 @@ int isAtBorder(int coord, int offset, int size) {
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
 
-  //compute the max of size1 and (y_offset + size2).  Call this h
-
+  int w = size1 + x_offset + size2;
+  int h = size1 + y_offset + size2;
+  int y;
+  int x;
+  int i;
+  int j;
+  for(i=0;i<h;i++)
+    {
+      y = i;
+      for(j=0;j<w;j++)
+	{
+	  x = j;
+	  if(((x_offset<=x&&x<x_offset+size2)&&(y==y_offset||y==y_offset+size2-1))||((y_offset<=y&&y<y_offset+size2)&&(x==x_offset||x==x_offset+size2-1)))
+	    {
+	      printf("*");
+	    }
+	  else if(((x<size1)&&(y==0||y==size1-1))||((y<size1)&&(x==0||x==size1-1)))
+	    {
+	      printf("#");
+	    }
+	  else{
+	    printf(" ");
+	  }
+	}
+      printf("\n");
+    }
   //count from 0 to h. Call the number you count with y
 
     //count from 0 to w. Call the number you count with x
@@ -51,3 +85,5 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
     //print a newline
 
 }
+
+
