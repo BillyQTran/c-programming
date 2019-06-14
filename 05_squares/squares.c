@@ -22,8 +22,10 @@ int isInRange(int coord, int offset, int size) {
  * offset + size
  */
 int isAtBorder(int coord, int offset, int size) {
+  int a;
+  a=offset+size;
   // if coord is equal to offest or offset + size
-  if(coord==offset||coord==offset + size)
+  if(coord==offset||coord==a)
     {
       return 1;
 	}
