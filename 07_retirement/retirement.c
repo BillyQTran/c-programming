@@ -40,6 +40,6 @@ typedef struct _retire_info retire_info;
     b.months = 384;
     b.contribution = -4000;
     b.rate_of_return = 0.000833333333333333333;
-    rerirement(age,money,a,b);
+   retirement(age,money,a,b);
     return EXIT_SUCCESS;
   }
