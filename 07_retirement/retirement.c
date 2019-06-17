@@ -9,7 +9,7 @@
 
 typedef struct _retire_info retire_info;
 
-  void rerirement(int starAge,double initial,retire_info working,retire_info retired)
+  void retirement(int starAge,double initial,retire_info working,retire_info retired)
   {
     int i;
     for(i=starAge;i<starAge+working.months;i++)
