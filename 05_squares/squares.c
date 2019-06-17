@@ -37,8 +37,25 @@ int isAtBorder(int coord, int offset, int size) {
 void squares(int size1, int x_offset, int y_offset, int size2) {
   //compute the max of size1 and (x_offset + size2).  Call this w
 
-  int w = size1 + x_offset + size2;
-  int h = size1 + y_offset + size2;
+  int w;
+  int h;
+  int k = 0;
+  if(y_offset+size2<=size1)
+    {
+      h = size1;
+    }
+  else{
+    h = y_offset+size2;
+    }
+
+  if(x_offset+size2<=size1)
+    {
+      w = size1;
+    }
+  else
+    {
+      w = x_offset+size2;
+    }
   int y;
   int x;
   int i;
@@ -46,6 +63,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
   for(i=0;i<h;i++)
     {
       y = i;
+      k++;
       for(j=0;j<w;j++)
 	{
 	  x = j;
@@ -62,6 +80,10 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 	  }
 	}
       printf("\n");
+      if(k==h)
+	{
+	  break;
+	}
     }
   //count from 0 to h. Call the number you count with y
 
