@@ -1,3 +1,12 @@
+abbba baaba
+abcab cccca
+abcde aabcd
+aaaaa ababb
+aaaaa bbbbbb
+aaaa bbbbb
+aabbcc aabbc
+aaaaa
+aaaaa aaaa
 a aaa aaaaa
 abaaa abaaa
 ababb abaaa
@@ -8,4 +17,3 @@ aaabb bbbbc
 aa   a ab   b
 abcde aabbc
 aabcd aaddc
-aaaaa bbbbb ccccc
