@@ -2,7 +2,13 @@
 #include <stdlib.h>
 
 int * arrayMax(int * array, int n) {
-  return NULL;
+  if (n == 0) return NULL;
+  int * vitri;
+  vitri = &array[0];
+  for (int i=1 ; i < n ;i++){
+    if (array[i] > *vitri) vitri = &array[i];
+  }
+  return vitri;
 }
 
 void doTest(int * array, int n) {
