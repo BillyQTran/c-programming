@@ -71,8 +71,6 @@ void add_card_to(deck_t * deck, card_t c){
 
 }
 
-
-
 card_t * add_empty_card(deck_t * deck){
 
   card_t* c1=malloc(sizeof(*c1));
@@ -90,10 +88,6 @@ card_t * add_empty_card(deck_t * deck){
   return c1;
 
 }
-
-
-
-
 
 deck_t * make_deck_exclude(deck_t * excluded_cards){
 
@@ -146,8 +140,6 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   return deck2 ;
 
 }
-
-
 
 void free_deck(deck_t * deck) {
 
