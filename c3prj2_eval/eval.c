@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "cards.h"
-#include "deck.h"
 int com1(card_t c1,card_t c2){
   if (c1.value == c2.value) return 1;
   return 0;
