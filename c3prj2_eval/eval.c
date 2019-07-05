@@ -181,7 +181,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 //other functions we have provided can make
 //use of get_match_counts.
 
-unsigned * gets_match_counts(deck_t * hand) {
+unsigned * get_match_counts(deck_t * hand) {
   unsigned* arr=malloc(hand->n_cards*sizeof(*arr));
   for(int i=0 ; i< hand->n_cards ; i++){
     card_t x = *(hand->cards[i]);
@@ -192,6 +192,8 @@ unsigned * gets_match_counts(deck_t * hand) {
     arr[i] = count;}
   return arr;
 }
+
+
 // We provide the below functions.  You do NOT need to modify them
 // In fact, you should not modify them!
 
@@ -269,7 +271,7 @@ hand_eval_t evaluate_hand(deck_t * hand) {
       return ans;
     }
   }
-  unsigned * match_counts = gets_match_counts(hand);
+  unsigned * match_counts = get_match_counts(hand);
   unsigned n_of_a_kind = get_largest_element(match_counts, hand->n_cards);
   assert(n_of_a_kind <= 4);
   size_t match_idx = get_match_index(match_counts, hand->n_cards, n_of_a_kind);
