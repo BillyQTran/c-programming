@@ -1,3 +1,4 @@
+input6.txt
 inpyt7.txt
 input5.txt
 input1.txt
