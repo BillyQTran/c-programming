@@ -1,1 +1,5 @@
 input.txt
+
+inpyt7.txt
+2 input.txt
+input.tx
