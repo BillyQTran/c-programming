@@ -43,7 +43,6 @@ void rotate(char matrix[10][10]){
       matrix[i][9-j]=temp;
     }
   }
-  return ;
 }
 
 int main(int argc,char** argv){
@@ -78,8 +77,8 @@ int main(int argc,char** argv){
 
   rotate(matrix);
 
-  for (int x=9;x>0;x--){
-    for (int y=9;y>0;y--){
+  for (int x=0;x<10;x++){
+    for (int y=0;y<10;y++){
       printf("%c",matrix[x][y]);
     }
     printf("\n");
